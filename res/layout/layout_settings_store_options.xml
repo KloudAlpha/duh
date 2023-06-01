@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/mainFrame" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="5.0dip" android:layout_alignParentTop="true">
+        <RelativeLayout android:background="@color/container_background" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sort" android:layout_centerVertical="true" />
+            <androidx.appcompat.widget.AppCompatSpinner android:theme="@style/Spinner" android:entries="@array/sort_order_list" android:id="@id/sortOrderSpinner" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:spinnerMode="dropdown" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+        <RelativeLayout android:id="@id/decline_delay_frame" android:background="@color/container_background" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/edit_decline_delay">
+                <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_blocked_store_decline_delay" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/text_desc_decline_delay_blocked" />
+            </LinearLayout>
+            <TextView android:textStyle="bold" android:textColor="@color/text" android:id="@id/edit_decline_delay" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+        <RelativeLayout android:id="@id/ban_override_frame" android:background="@color/container_background" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toStartOf="@id/edit_ban_override_field" android:layout_alignParentStart="true">
+                <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Block override amount" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="DO NOT decline the order if the offer amount is greater than this amount" android:layout_marginEnd="15.0dip" />
+            </LinearLayout>
+            <TextView android:textStyle="bold" android:textColor="@color/text" android:id="@id/edit_ban_override_field" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:id="@id/information" android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Select a store for additional options" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="5.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+            <ProgressBar android:layout_gravity="center" android:id="@id/progressBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:progressBarStyleLarge" />
+            <ListView android:scrollbarSize="7.0dip" android:scrollbarThumbVertical="@color/colorPrimary" android:id="@id/store_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="0.0dip" android:divider="@android:color/transparent" android:dividerHeight="5.0dip" android:layout_alignParentBottom="true" android:fastScrollEnabled="true" android:fadeScrollbars="false" android:overScrollMode="never" android:layout_marginEnd="0.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <TextView android:textColor="#ff525252" android:gravity="center" android:layout_gravity="center" android:id="@id/emptyElement" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NO DATA FOUND" />
+    </LinearLayout>
+</RelativeLayout>

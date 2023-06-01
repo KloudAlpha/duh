@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main_frame" android:background="@drawable/shape_button_round" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="200.0dip" android:animateLayoutChanges="true" android:backgroundTint="@color/container_background" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@drawable/shape_button_round" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginStart="175.0dip" android:layout_marginEnd="175.0dip" android:backgroundTint="@color/dividers" />
+    <TextView android:textColor="@color/text" android:layout_gravity="center" android:id="@id/title_field" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Overlay Options" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_gravity="center" android:id="@id/sub_title_field" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Additional options for the DUH overlay" />
+    <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="5.0dip" />
+    <RelativeLayout android:id="@id/overlay_enabled" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_show_overlay">
+            <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/title_enable_overlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/string_enable_overlay" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Enable the DUH app overlays" />
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_enable_overlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/overlay_show_ar_frame" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_show_ar">
+            <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/title_show_ar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Acceptance rate" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Show estimated acceptance rating.\n* Only available with the small overlay" />
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_show_ar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/overlay_show_address" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_show_address">
+            <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/title_show_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use large overlay" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Show address on overlay when available\n* If address is unavailable it will show check map" />
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_large_overlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/overlay_show_timer" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_delivery_timer">
+            <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/show_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delivery Timer" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Show timer while on delivery" />
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_delivery_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/overlay_per_hour_frame" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_show_per_hour">
+            <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/title_show_per_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Per hour rate" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Show the estimated per hour rate\n*Only available with the small overlay" />
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_show_per_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <Button android:id="@id/close_button" android:background="@drawable/shape_border_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:text="Close" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" style="@style/ButtonStyle" />
+</LinearLayout>

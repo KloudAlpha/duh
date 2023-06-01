@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/busyDaysCard" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cardBackgroundColor="@color/container_background" app:cardCornerRadius="0.0dip" app:cardElevation="2.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="11.0sp" android:textColor="@color/Gray" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/titleRequest" android:layout_marginStart="10.0dip" />
+        <View android:background="@color/background" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="1.0dip" />
+        <com.github.mikephil.charting.charts.BarChart android:id="@id/chartRequest" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

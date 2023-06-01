@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/text" android:gravity="center" android:id="@id/tv2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_enable" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/label_speak_to_me_enable" android:layout_below="@id/tv2" />
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_enable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+    <RelativeLayout android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/text" android:gravity="center" android:id="@id/tv5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Incoming order" android:layout_alignTop="@id/switch_on_order_incoming" android:layout_alignBottom="@id/switch_on_order_incoming" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speak on incoming order" android:layout_below="@id/tv5" />
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_on_order_incoming" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/text" android:gravity="center" android:id="@id/tv3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order accepted" android:layout_alignTop="@id/switch_on_order_accept" android:layout_alignBottom="@id/switch_on_order_accept" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speak on order accepted" android:layout_below="@id/tv3" />
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_on_order_accept" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/text" android:gravity="center" android:id="@id/tv4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order declined" android:layout_alignTop="@id/switch_on_order_decline" android:layout_alignBottom="@id/switch_on_order_decline" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speak on order declined" android:layout_below="@id/tv4" />
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_on_order_decline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/text" android:gravity="center" android:id="@id/tv6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Order completed" android:layout_alignTop="@id/switch_on_order_complete" android:layout_alignBottom="@id/switch_on_order_complete" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speak when order is completed" android:layout_below="@id/tv6" />
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_on_order_complete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/speak_on_phone_locked_layout" android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/text" android:gravity="center" android:id="@id/title_phone_locked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Phone Locked" android:layout_alignTop="@id/switch_on_phone_locked" android:layout_alignBottom="@id/switch_on_phone_locked" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speak when phone is locked &amp; an order is incoming/shift has been paused." android:layout_below="@id/title_phone_locked" android:layout_toStartOf="@id/switch_on_phone_locked" android:layout_alignParentStart="true" />
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_on_phone_locked" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/frame_new_shift_available" android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/text" android:gravity="center" android:id="@id/tv_title_shift_available" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Shift available" android:layout_alignTop="@id/switch_new_shift_available" android:layout_alignBottom="@id/switch_new_shift_available" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speak when a new shift is available" android:layout_below="@id/tv_title_shift_available" />
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_new_shift_available" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textColor="@color/text" android:gravity="center" android:id="@id/tv7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Shift completed" android:layout_alignTop="@id/switch_on_shift_complete" android:layout_alignBottom="@id/switch_on_shift_complete" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Speak when shift is completed" android:layout_below="@id/tv7" />
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_on_shift_complete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

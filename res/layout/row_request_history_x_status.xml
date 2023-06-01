@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/extra_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/extra_div" android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+    <LinearLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/arrival_time_frame" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/Gray" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Store arrival time" android:layout_weight="1.0" />
+            <TextView android:textColor="@color/Gray" android:gravity="end" android:id="@id/arrival_time_field" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/depart_time_frame" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/Gray" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Store departure time" android:layout_weight="1.0" />
+            <TextView android:textColor="@color/Gray" android:gravity="end" android:id="@id/depart_time_field" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <View android:id="@id/store_time_div" android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/wait_time_frame" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/Gray" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_time_at_store" android:layout_weight="1.0" />
+            <TextView android:textColor="@color/Gray" android:gravity="end" android:id="@id/time_at_store_field" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/delivery_time_frame" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/Gray" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Time on delivery" android:layout_weight="1.0" />
+            <TextView android:textColor="@color/Gray" android:gravity="end" android:id="@id/delivery_time_field" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView android:id="@id/status_card" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" app:cardCornerRadius="10.0dip">
+        <RelativeLayout android:background="#ffedeef1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/icon_status" android:background="@drawable/ic_block_icon" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_centerVertical="true" android:contentDescription="@string/imageView" />
+            <TextView android:textStyle="bold" android:textColor="@color/amazon_gray" android:gravity="center" android:id="@id/status_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="(AD) PAYOUT TOO LOW" android:layout_centerVertical="true" android:layout_marginStart="5.0dip" android:layout_toEndOf="@id/icon_status" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

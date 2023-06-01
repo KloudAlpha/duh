@@ -1,0 +1,63 @@
+.class public final Lrf/i$b;
+.super Ldf/l;
+.source "Distinct.kt"
+
+# interfaces
+.implements Lcf/l;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lrf/i;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ldf/l;",
+        "Lcf/l<",
+        "Ljava/lang/Object;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final b:Lrf/i$b;
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lrf/i$b;
+
+    invoke-direct {v0}, Lrf/i$b;-><init>()V
+
+    sput-object v0, Lrf/i$b;->b:Lrf/i$b;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Ldf/l;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    return-object p1
+.end method

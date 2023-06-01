@@ -1,0 +1,23 @@
+package com.stripe.android.view;
+
+import cf.InterfaceC1908l;
+import p072df.C3334j;
+import p353te.C9473u;
+/* compiled from: PaymentAuthWebViewActivity.kt */
+/* loaded from: classes2.dex */
+public /* synthetic */ class PaymentAuthWebViewActivity$onCreate$webViewClient$2 extends C3334j implements InterfaceC1908l<Throwable, C9473u> {
+    public PaymentAuthWebViewActivity$onCreate$webViewClient$2(Object obj) {
+        super(1, obj, PaymentAuthWebViewActivity.class, "onAuthComplete", "onAuthComplete$payments_core_release(Ljava/lang/Throwable;)V", 0);
+    }
+
+    @Override // cf.InterfaceC1908l
+    public /* bridge */ /* synthetic */ C9473u invoke(Throwable th2) {
+        invoke2(th2);
+        return C9473u.f23053a;
+    }
+
+    /* renamed from: invoke  reason: avoid collision after fix types in other method */
+    public final void invoke2(Throwable th2) {
+        ((PaymentAuthWebViewActivity) this.receiver).onAuthComplete$payments_core_release(th2);
+    }
+}

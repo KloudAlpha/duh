@@ -1,0 +1,135 @@
+.class public final Lf0/i$b;
+.super Ldf/l;
+.source "ClickableText.kt"
+
+# interfaces
+.implements Lcf/l;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lf0/i;->a(Lx1/b;Lw0/h;Lx1/x;ZIILcf/l;Lcf/l;Lk0/h;II)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ldf/l;",
+        "Lcf/l<",
+        "Lx1/v;",
+        "Lte/u;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic b:Lk0/j1;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lk0/j1<",
+            "Lx1/v;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public final synthetic c:Lcf/l;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcf/l<",
+            "Lx1/v;",
+            "Lte/u;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lk0/j1;Lcf/l;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lk0/j1<",
+            "Lx1/v;",
+            ">;",
+            "Lcf/l<",
+            "-",
+            "Lx1/v;",
+            "Lte/u;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lf0/i$b;->b:Lk0/j1;
+
+    iput-object p2, p0, Lf0/i$b;->c:Lcf/l;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Ldf/l;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    check-cast p1, Lx1/v;
+
+    .line 2
+    .line 3
+    const-string v0, "it"
+
+    .line 4
+    .line 5
+    invoke-static {p1, v0}, Ldf/k;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 6
+    .line 7
+    .line 8
+    iget-object v0, p0, Lf0/i$b;->b:Lk0/j1;
+
+    .line 9
+    .line 10
+    invoke-interface {v0, p1}, Lk0/j1;->setValue(Ljava/lang/Object;)V
+
+    .line 11
+    .line 12
+    .line 13
+    iget-object v0, p0, Lf0/i$b;->c:Lcf/l;
+
+    .line 14
+    .line 15
+    invoke-interface {v0, p1}, Lcf/l;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 16
+    .line 17
+    .line 18
+    sget-object p1, Lte/u;->a:Lte/u;
+
+    .line 19
+    .line 20
+    return-object p1
+    .line 21
+    .line 22
+    .line 23
+    .line 24
+    .line 25
+    .line 26
+    .line 27
+    .line 28
+    .line 29
+    .line 30
+    .line 31
+    .line 32
+.end method

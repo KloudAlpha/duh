@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/rootContainer" android:background="@drawable/shape_border_round" android:padding="5.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:backgroundTint="@color/White">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textStyle="bold" android:textColor="@color/Black" android:gravity="center" android:id="@id/venueNameText" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+            <TextView android:textStyle="bold" android:textColor="@color/Black" android:id="@id/todText" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/popup_tod" android:layout_below="@id/venueNameText" />
+            <ImageView android:layout_gravity="end" android:id="@id/closeButton" android:background="@android:drawable/ic_delete" android:padding="5.0dip" android:visibility="invisible" android:layout_width="35.0dip" android:layout_height="25.0dip" android:layout_alignTop="@id/venueNameText" android:layout_alignBottom="@id/todText" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/adFrame" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12.0sp" android:textColor="@color/Black" android:gravity="center" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:text="@string/ad_support_message" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

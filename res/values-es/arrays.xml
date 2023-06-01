@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color_list">
+        <item>White</item>
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Yellow</item>
+    </string-array>
+    <string-array name="sort_order_list">
+        <item>Alphabetical</item>
+        <item>Avg Time</item>
+        <item>Avg Payout</item>
+    </string-array>
+</resources>

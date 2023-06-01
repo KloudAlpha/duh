@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/final_total_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/div" android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="5.0dip" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <LinearLayout android:orientation="vertical" android:id="@id/final_payout_frame" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/label_actual_payout" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/Green" android:gravity="center" android:id="@id/final_payout_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/stringAmountPlaceHolder" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/base_pay_frame" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/label_base_pay" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/Gray" android:gravity="center" android:id="@id/base_pay_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/stringAmountPlaceHolder" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/tip_frame" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/label_tip_amount" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/Green" android:gravity="center" android:id="@id/tip_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:text="@string/stringAmountPlaceHolder" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

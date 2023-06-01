@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/logo" android:background="#ff151616" android:layout_width="fill_parent" android:layout_height="100.0dip" android:src="@drawable/middleton_tech_protects_logo" android:contentDescription="@string/imageView" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text" android:id="@id/title" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_title_income_protection" app:layout_constraintTop_toBottomOf="@id/logo" />
+            <TextView android:textColor="@color/text" android:id="@id/desc" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_title_income_protection_desc" app:layout_constraintTop_toBottomOf="@id/title" />
+            <Button android:textColor="@color/White" android:layout_gravity="end" android:id="@id/signUpButton" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_button_get_protection" android:layout_marginEnd="15.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/desc" style="@style/ButtonStyle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text" android:gravity="center" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/text_title_paid_time_off" android:textAllCaps="true" />
+                <TextView android:textStyle="bold" android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_collision_repair" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <ImageView android:background="@drawable/ic_collision" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:contentDescription="@string/imageView" android:layout_marginStart="5.0dip" />
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/text_desc_dpp_collision" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <TextView android:textStyle="bold" android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/label_hospitalization" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <ImageView android:background="@drawable/ic_hospital" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:contentDescription="@string/imageView" android:layout_marginStart="5.0dip" android:backgroundTint="@color/text" />
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/text_desc_dpp_hospital" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <TextView android:textStyle="bold" android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/label_deactivation" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <ImageView android:background="@drawable/ic_phone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:contentDescription="@string/imageView" android:layout_marginStart="5.0dip" android:backgroundTint="@color/text" />
+                <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/text_desc_deactivated" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text" android:gravity="start" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/text_title_faq" />
+                <View android:background="#ff808080" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <RelativeLayout android:id="@id/faq_one" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_title_dpp_why" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                </RelativeLayout>
+                <View android:background="#ff808080" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <RelativeLayout android:id="@id/faq_two" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_title_dpp_what" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                </RelativeLayout>
+                <View android:background="#ff808080" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <RelativeLayout android:id="@id/faq_three" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_title_dpp_can" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                </RelativeLayout>
+                <View android:background="#ff808080" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <RelativeLayout android:id="@id/faq_four" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_title_dpp_do" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    <include layout="@layout/pop_up_kover_faq" />
+</androidx.constraintlayout.widget.ConstraintLayout>

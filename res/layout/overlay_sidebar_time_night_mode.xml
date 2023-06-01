@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/rootContainer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="#ff3e3e3e" app:contentPadding="5.0dip" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/timeFrame" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <TextView android:textSize="11.0sp" android:textColor="@color/White" android:gravity="center" android:id="@id/timerTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/title_time" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/White" android:id="@id/timeOnTrip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/timePlaceHolder" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/est_payout_frame" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:minWidth="60.0dip">
+            <TextView android:textSize="11.0sp" android:textColor="@color/White" android:gravity="center" android:id="@id/est_payout_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Est Base Pay" />
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/White" android:gravity="center" android:id="@id/est_payout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="$0.00" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/beans_link_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="1.0dip" android:layout_marginBottom="1.0dip" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/White" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Navigate" />
+            <ImageView android:background="@drawable/beans_icon_transparent" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="1.0dip" android:scaleType="centerCrop" android:contentDescription="@string/imageView" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/weekly_stats_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" app:cardBackgroundColor="@color/container_background" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="11.0sp" android:textColor="@color/Gray" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/label_current_week" />
+                <TextView android:textSize="11.0sp" android:textColor="@color/Gray" android:gravity="center" android:id="@id/week_start_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="07/01/2021 - 07/07/2021" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true">
+                <TextView android:textSize="8.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/est_earning" />
+                <TextView android:textSize="30.0sp" android:textColor="@color/Green" android:gravity="center" android:id="@id/week_total" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stringAmountPlaceHolder" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/shape_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:backgroundTint="@color/snackBarTextColor">
+            <RelativeLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+                <TextView android:textColor="@color/text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_time_online" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/week_stat_active_time" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_time_display" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="10.0dip" />
+            <RelativeLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+                <TextView android:textColor="@color/text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_active_time" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/week_stat_delivery_time" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_time_display" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="10.0dip" />
+            <RelativeLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+                <TextView android:textColor="@color/text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_average" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/week_hourly_avg" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_hourly_avg_display" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/week_gps_tracking_frame" android:background="@drawable/shape_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:backgroundTint="@color/snackBarTextColor">
+            <RelativeLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+                <TextView android:textColor="@color/text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_distance" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/label_week_stat_miles_total" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_distance_miles" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="10.0dip" />
+            <RelativeLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+                <TextView android:textColor="@color/text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_delivery" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/label_week_stat_miles_delivery" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_distance_miles" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="10.0dip" />
+            <RelativeLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+                <TextView android:textColor="@color/text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_average" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/label_week_stat_per_mile" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_distance_mi_average" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:background="@drawable/shape_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:backgroundTint="@color/snackBarTextColor">
+            <RelativeLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+                <TextView android:textColor="@color/text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/completed" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/week_stat_completed" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placeHolderInteger" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="10.0dip" />
+            <RelativeLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+                <TextView android:textColor="@color/text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rejected" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/week_stat_rejected" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placeHolderInteger" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@color/dividers" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="10.0dip" />
+            <RelativeLayout android:orientation="horizontal" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="1.0dip">
+                <TextView android:textColor="@color/text" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_average" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/week_stat_del_per_hour" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dashboard_delivery_hourly_avg_display" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

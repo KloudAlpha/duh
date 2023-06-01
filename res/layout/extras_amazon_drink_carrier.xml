@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/DrinkCarrierFrame" android:background="@color/container_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="110.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/logo" android:background="@drawable/drink_carrier_logo" android:layout_width="50.0dip" android:layout_height="50.0dip" android:contentDescription="@string/imageView" />
+    <TextView android:textColor="@color/text" android:id="@id/title" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_amazon_cupholders" android:layout_marginStart="5.0dip" android:layout_toEndOf="@id/logo" />
+    <TextView android:textColor="@color/Gray" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_desc_cupholders" android:layout_below="@id/title" android:layout_marginStart="5.0dip" android:layout_toStartOf="@id/arrow" android:layout_toEndOf="@id/logo" />
+    <ImageView android:id="@id/arrow" android:background="@drawable/ic_arrow_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_alignParentEnd="true" android:backgroundTint="@color/Gray" />
+</RelativeLayout>

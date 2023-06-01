@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/layoutUpdate" android:background="@color/White" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:overScrollMode="never">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/okayBTN" android:background="@drawable/btn_round" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginTop="10.0dip" android:src="@android:drawable/ic_menu_close_clear_cancel" android:contentDescription="@string/imageView" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" android:backgroundTint="@color/colorPrimaryDark" />
+            <ImageView android:background="@drawable/img_whats_new" android:layout_width="100.0dip" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" android:layout_centerHorizontal="true" android:contentDescription="@string/imageView" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@color/imageView" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+            <TextView android:gravity="start" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/text_screenshot_warning" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+            <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+            <TextView android:gravity="start" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="We periodically update our terms of service agreement, continued use of the app directly specifies that you have read and agree to these terms. You may find the updated terms at https://middletontech.com/terms.php or by clicking the Terms of Service link under your account tab." android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+            <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textStyle="bold" android:textColor="@color/Black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="VERSION 1.5.8.*" />
+                    <TextView android:textColor="@color/Gray" android:gravity="start" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="• Bug fixes for crash issues \n• Added new filters for decline settings \n• Updated parts of the User Interface" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textStyle="bold" android:textColor="@color/Black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="VERSION 1.5.5.*" />
+                    <TextView android:textColor="@color/Gray" android:gravity="start" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="• Critical bug fixes for crash issues \n• Added check for updates option \n• Added check services option \n• Added email support option \n• Updated parts of the User Interface \n• Removed sync option" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textStyle="bold" android:textColor="@color/Black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="VERSION 1.5.1.*" />
+                    <TextView android:textColor="@color/Gray" android:gravity="start" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="• Critical bug fixes for crash issues \n• Updated parts of the User Interface \n• Updated export to allow by year \n• Added back in ad free subscription \n• Added Middleton Tech Protects income protection plan" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textStyle="bold" android:textColor="@color/Black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="VERSION 1.4.8.*" />
+                    <TextView android:textColor="@color/Gray" android:gravity="start" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="• Critical bug fixes for crash issues \n• Fixed hourly rate not calculating correctly \n• Updated parts of the User Interface \n• Temporarily removed ad free purchase" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

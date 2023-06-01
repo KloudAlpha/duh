@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main_frame" android:background="@drawable/shape_button_round" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="200.0dip" android:animateLayoutChanges="true" android:backgroundTint="@color/container_background" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@drawable/shape_button_round" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginStart="175.0dip" android:layout_marginEnd="175.0dip" android:backgroundTint="@color/dividers" />
+    <TextView android:textColor="@color/text" android:layout_gravity="center" android:id="@id/title_field" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Para Options" />
+    <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_gravity="center" android:id="@id/sub_title_field" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="This feature requires the para app to be online &amp; working" />
+    <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="5.0dip" />
+    <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_para_assist">
+            <TextView android:textColor="@color/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Assist" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Use para prediction for auto accept/decline" />
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_para_assist" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_para_overlay">
+            <TextView android:textColor="@color/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Overlay" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Show para predictions on the DUH overlay" />
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_para_overlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/switch_show_items_overlay">
+            <TextView android:textColor="@color/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Items" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Display items on the DUH overlay when avaiable" />
+        </LinearLayout>
+        <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_show_items_overlay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

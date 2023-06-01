@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/auto_nav_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+        <TextView android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/string_auto_nav" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/auto_nav_arrow" android:background="@drawable/ic_down_arrow" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_alignParentEnd="true" android:backgroundTint="@color/dividers" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/auto_nav_body" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="5.0dip">
+        <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        <RelativeLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+            <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/tv1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_enable" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/label_enable_enable_auto_nav" android:layout_below="@id/tv1" />
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_auto_nav" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+            <TextView android:textColor="@color/text" android:id="@id/title_auto_nav_store" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Navigate To Pickup" android:layout_toStartOf="@id/switch_auto_nav_pickup" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Automatically start navigation to pickup" android:layout_below="@id/title_auto_nav_store" />
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_auto_nav_pickup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+            <TextView android:textColor="@color/text" android:id="@id/title_auto_nav_customer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Navigate To Drop-Off" android:layout_toStartOf="@id/switch_auto_nav_drop_off" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Automatically start navigation to drop-off" android:layout_below="@id/title_auto_nav_customer" />
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_auto_nav_drop_off" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+</LinearLayout>

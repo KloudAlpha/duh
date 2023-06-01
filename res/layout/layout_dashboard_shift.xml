@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/current_shift_container" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" layout="@layout/layout_dashboard_current_delivery" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" layout="@layout/layout_dashboard_prev_delivery" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" layout="@layout/layout_dashboard_shift_data" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" layout="@layout/layout_dashboard_shift_request_button" />
+</LinearLayout>

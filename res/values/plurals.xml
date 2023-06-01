@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d new notifications</item>
+        <item quantity="one">%d new notification</item>
+    </plurals>
+    <plurals name="stripe_account_picker_multiselect_confirm">
+        <item quantity="other">Link accounts</item>
+        <item quantity="one">Link account</item>
+    </plurals>
+    <plurals name="stripe_attachlinkedpaymentaccount_desc">
+        <item quantity="other">Please wait while your accounts are linked to %1$s</item>
+        <item quantity="one">Please wait while your account is linked to %1$s</item>
+    </plurals>
+    <plurals name="stripe_attachlinkedpaymentaccount_desc_no_business">
+        <item quantity="other">Please wait while your accounts are linked to this business</item>
+        <item quantity="one">Please wait while your account is linked to this business</item>
+    </plurals>
+    <plurals name="stripe_attachlinkedpaymentaccount_title">
+        <item quantity="other">Linking accounts</item>
+        <item quantity="one">Linking account</item>
+    </plurals>
+    <plurals name="stripe_success_desc">
+        <item quantity="other">Your accounts were successfully linked to %1$s through Stripe.</item>
+        <item quantity="zero"></item>
+        <item quantity="one">Your account was successfully linked to %1$s through Stripe.</item>
+    </plurals>
+    <plurals name="stripe_success_desc_no_business">
+        <item quantity="other">Your accounts were successfully linked through Stripe.</item>
+        <item quantity="zero"></item>
+        <item quantity="one">Your account was successfully linked through Stripe.</item>
+    </plurals>
+</resources>

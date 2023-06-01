@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service android:description="@string/accessibility_service_description" android:summary="DUH helps assist you to while driving so you can focus on the delivery." android:accessibilityEventTypes="typeAllMask" android:packageNames="com.mt.dashutility, com.doordash.driverapp, com.paramobile" android:accessibilityFeedbackType="feedbackGeneric" android:notificationTimeout="750" android:accessibilityFlags="flagDefault|flagIncludeNotImportantViews|flagReportViewIds|flagRequestFingerprintGestures|flagRetrieveInteractiveWindows" android:canRetrieveWindowContent="true" android:canPerformGestures="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

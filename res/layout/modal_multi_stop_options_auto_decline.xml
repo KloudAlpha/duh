@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:id="@id/main" android:background="@drawable/shape_button_round" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="200.0dip" android:animateLayoutChanges="true" android:backgroundTint="@color/container_background" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@drawable/shape_button_round" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginStart="175.0dip" android:layout_marginEnd="175.0dip" android:backgroundTint="@color/dividers" />
+        <TextView android:textColor="@color/text" android:layout_gravity="center" android:id="@id/title_field" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Multiple Stop Order Options" />
+        <TextView android:textColor="@color/Gray" android:gravity="center" android:id="@id/desc_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Options to auto decline multiple stop order request" />
+        <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="5.0dip" />
+        <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_enable" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Decline orders that do meet the following filters" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_auto_decline_multi_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/ad_multi_stop_min_payout_view">
+                <TextView android:textColor="@color/text" android:id="@id/title_add_on_min_payout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_min_per_order" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:id="@id/desc_add_on_min_payout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Multiple stop orders with an offer amount less than this amount will be declined" />
+            </LinearLayout>
+            <EditText android:textColor="@color/text" android:textColorHint="@color/text" android:gravity="center" android:id="@id/ad_multi_stop_min_payout_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:minHeight="48.0dip" android:hint="0.00" android:inputType="numberDecimal" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" android:importantForAutofill="no" />
+        </RelativeLayout>
+        <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/ad_multi_stop_min_per_mile_view">
+                <TextView android:textColor="@color/text" android:id="@id/title_min_per_mile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_min_per_mile" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:id="@id/desc_min_per_mile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Multiple stop orders with a per mile amount less than this amount will be declined" />
+            </LinearLayout>
+            <EditText android:textColor="@color/text" android:textColorHint="@color/text" android:gravity="center" android:id="@id/ad_multi_stop_min_per_mile_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:minHeight="48.0dip" android:hint="0.00" android:inputType="numberDecimal" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" android:importantForAutofill="no" />
+        </RelativeLayout>
+        <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/ad_multi_stop_max_distance_view">
+                <TextView android:textColor="@color/text" android:id="@id/title_add_on_max_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_max_distance" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:id="@id/desc_add_on_max_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Multiple stop orders with distance greater than this will be declined" />
+            </LinearLayout>
+            <EditText android:textColor="@color/text" android:textColorHint="@color/text" android:gravity="center" android:id="@id/ad_multi_stop_max_distance_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48.0dip" android:minHeight="48.0dip" android:hint="0.00" android:inputType="numberDecimal" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" android:importantForAutofill="no" />
+        </RelativeLayout>
+        <Button android:id="@id/close_button" android:background="@drawable/shape_border_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:text="Update" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" style="@style/ButtonStyle" />
+    </LinearLayout>
+</ScrollView>

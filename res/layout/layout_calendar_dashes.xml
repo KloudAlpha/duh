@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/mainFrame" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:gravity="center" android:id="@id/information" android:background="@color/container_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Press &amp; hold shift for more options" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/information">
+        <ListView android:scrollbarSize="1.0dip" android:scrollbarThumbVertical="@color/colorPrimary" android:id="@id/rejected_list" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:cacheColorHint="@android:color/transparent" android:divider="@android:color/transparent" android:dividerHeight="8.0dip" android:layout_weight="1.0" android:fadeScrollbars="true" android:overScrollMode="never" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+        <TextView android:textColor="#ff525252" android:gravity="center" android:layout_gravity="center" android:id="@id/emptyElement" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="NO DATA FOUND" />
+    </LinearLayout>
+</RelativeLayout>

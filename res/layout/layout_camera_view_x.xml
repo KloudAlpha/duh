@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/cameraFrame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottomFrame">
+        <com.otaliastudios.cameraview.CameraView android:id="@id/camera" android:layout_width="fill_parent" android:layout_height="fill_parent" app:cameraEngine="camera2" app:cameraFacing="back" app:cameraGesturePinch="zoom" app:cameraGestureTap="autoFocus" app:cameraMode="picture" app:cameraPreview="glSurface" app:cameraUseDeviceOrientation="false">
+            <ImageView android:layout_gravity="end|center|top" android:id="@id/camera_overlay_image" android:layout_width="200.0dip" android:layout_height="125.0dip" android:layout_marginTop="5.0dip" android:src="@drawable/no_image" android:scaleType="fitXY" android:contentDescription="@string/imageView" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" app:layout_drawOnPictureSnapshot="true" app:layout_drawOnPreview="true" app:layout_drawOnVideoSnapshot="true" />
+            <LinearLayout android:layout_gravity="start|bottom|center" android:orientation="vertical" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="10.0dip" android:layout_marginEnd="60.0dip" app:layout_drawOnPictureSnapshot="true" app:layout_drawOnPreview="true" app:layout_drawOnVideoSnapshot="true">
+                <TextView android:textColor="@color/White" android:id="@id/timestampTV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TIMESTAMP" />
+                <TextView android:textColor="@color/White" android:id="@id/timestampGPSLatLng" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LATLNG" />
+                <TextView android:textColor="@color/White" android:id="@id/timestampGPS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GPS ADDRESS" />
+            </LinearLayout>
+        </com.otaliastudios.cameraview.CameraView>
+    </RelativeLayout>
+    <ImageView android:id="@id/flashLightToggle" android:background="@drawable/ic_flashlight" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="15.0dip" android:layout_above="@id/imageSavedFrame" android:contentDescription="@string/imageView" android:layout_alignParentEnd="true" android:backgroundTint="@color/Gray" />
+    <RelativeLayout android:id="@id/imageSavedFrame" android:background="@color/colorPrimaryDark" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/bottomFrame">
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/White" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Image saved to gallery" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/bottomFrame" android:background="@color/container_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <androidx.cardview.widget.CardView android:layout_width="55.0dip" android:layout_height="55.0dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:translationZ="5.0dip" android:elevation="5.0dip" android:backgroundTint="@color/DarkRed" app:cardBackgroundColor="@color/DarkRed" app:cardCornerRadius="100.0dip">
+            <Button android:id="@id/button_capture" android:background="@drawable/shape_round" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:backgroundTint="@color/Blue" />
+        </androidx.cardview.widget.CardView>
+        <ImageView android:id="@id/button_settings" android:background="@drawable/ic_settings" android:layout_width="64.0dip" android:layout_height="64.0dip" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" android:backgroundTint="@color/text" />
+    </RelativeLayout>
+</RelativeLayout>

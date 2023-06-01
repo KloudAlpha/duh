@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:id="@id/billingDetailsFrame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:translationZ="3.0dip" android:elevation="10.0dip" app:cardBackgroundColor="@color/container_background" app:contentPadding="3.0dip" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout android:theme="@style/TextInputLayoutAppearance" android:textColorHint="@color/text" android:id="@id/name_field_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/label_name_legal" app:boxStrokeColor="@color/text" app:hintTextColor="@color/text" style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+                <com.google.android.material.textfield.TextInputEditText android:textColor="@color/text" android:id="@id/cardHolder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="textPersonName" android:backgroundTint="@color/container_background" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:theme="@style/TextInputLayoutAppearance" android:textColorHint="@color/text" android:id="@id/phone_field_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/label_phone" app:boxStrokeColor="@color/text" app:hintTextColor="@color/text" style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+                <com.google.android.material.textfield.TextInputEditText android:textColor="@color/text" android:id="@id/phoneHolder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:inputType="phone" android:backgroundTint="@color/container_background" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <RelativeLayout android:id="@id/paymentFrame" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text" android:id="@id/titlePayment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_payment" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="end" android:id="@id/paymentMethod" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/arrow" android:layout_toEndOf="@id/titlePayment" />
+                <ImageView android:id="@id/arrow" android:background="@drawable/ic_arrow_right" android:layout_width="25.0dip" android:layout_height="25.0dip" android:contentDescription="@string/imageView" android:layout_alignParentEnd="true" android:backgroundTint="@color/DarkGray" />
+            </RelativeLayout>
+            <View android:background="@color/DarkGray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+            <RelativeLayout android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_plan_type" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:gravity="end" android:id="@id/subscriptionType" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:textAllCaps="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@color/DarkGray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/subWarningKover" />
+            <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+                <CheckBox android:id="@id/authPaymentCB" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+                <TextView android:textColor="@color/text" android:id="@id/auth_warning_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/authWarning" android:layout_alignTop="@id/authPaymentCB" android:layout_centerVertical="true" android:layout_marginStart="2.0dip" android:layout_toEndOf="@id/authPaymentCB" />
+            </RelativeLayout>
+            <androidx.cardview.widget.CardView android:id="@id/errorMessageFrame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginBottom="5.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:cardBackgroundColor="@color/Yellow" app:cardCornerRadius="25.0dip" app:contentPadding="5.0dip">
+                <TextView android:textStyle="bold|italic" android:textColor="@color/Black" android:gravity="center" android:layout_gravity="center" android:id="@id/errorMessageText" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_error_placeholder" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout android:id="@id/progressBarHolder" android:background="@color/amazon_gray" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.7" android:translationZ="999.0dip">
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="100.0dip" android:layout_height="40.0dip" android:indeterminate="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:progressBarStyleLarge" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/White" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/label_please_wait" android:layout_below="@id/progress_bar" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <androidx.cardview.widget.CardView android:id="@id/submitPaymentCardView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" app:cardBackgroundColor="@color/container_background" app:cardCornerRadius="5.0dip" app:contentPadding="5.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" style="@style/ButtonStyle">
+        <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:textColor="@color/text" android:gravity="start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_submit_payment" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold|italic" android:textColor="@color/text" android:layout_gravity="end" android:id="@id/totalPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$0.00 USD" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

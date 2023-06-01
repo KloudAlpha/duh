@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/drawer_layout" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/bottom_nav_div" android:layout_alignParentTop="true">
+        <RelativeLayout android:id="@id/statusFrame" android:background="@color/container_background" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip">
+            <ImageView android:id="@id/menu_account" android:background="@drawable/ic_account" android:padding="10.0dip" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_marginStart="5.0dip" android:backgroundTint="@color/imageView" />
+            <ImageView android:id="@id/menu_support" android:background="@drawable/ic_baseline_help_24" android:padding="10.0dip" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" android:backgroundTint="@color/imageView" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+                <TextView android:textSize="12.0sp" android:textColor="@color/text" android:layout_gravity="center" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_offline" android:fontFamily="@font/hobostd" />
+                <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitchMain" android:textStyle="bold" android:id="@id/btn_status" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="46.0dip" android:minHeight="48.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/text" android:layout_gravity="center" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_online" android:fontFamily="@font/hobostd" android:backgroundTint="#ff02c6a9" />
+            </LinearLayout>
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@id/banner_ad_cardview" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardCornerRadius="0.0dip">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/banner_ad_container" android:padding="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <WebView android:id="@id/banner_webView" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@id/admin_message_frame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip">
+            <RelativeLayout android:gravity="center" android:layout_gravity="center" android:background="@color/Yellow" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/admin_close_button" android:background="@drawable/ic_round_cancel_24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:contentDescription="close admin message" android:layout_alignParentEnd="true" android:backgroundTint="@color/Black" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Black" android:gravity="start" android:id="@id/admin_message_text" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="8.0dip" android:paddingEnd="2.0dip" android:layout_toStartOf="@id/admin_close_button" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@id/accessibilityServicesFrame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip">
+            <RelativeLayout android:gravity="center" android:layout_gravity="center" android:background="@color/DarkRed" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/White" android:gravity="start" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_acc_service" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@id/batteryOptimizationFrame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip">
+            <RelativeLayout android:gravity="center" android:layout_gravity="center" android:background="@color/CornflowerBlue" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="@color/White" android:gravity="start" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_battery_optimize" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@id/notificationAccessFrame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip">
+            <RelativeLayout android:gravity="center" android:layout_gravity="center" android:background="@color/colorAccent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/White" android:gravity="start" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_notification_access" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:layout_gravity="center" android:id="@id/updateAvailableFrame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip">
+            <RelativeLayout android:gravity="center" android:layout_gravity="center" android:background="@color/Orange" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/White" android:gravity="start" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/update_ready" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true" android:fadeScrollbars="false" android:overScrollMode="never">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip">
+                <androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:cardBackgroundColor="@color/container_background" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip" app:contentPadding="5.0dip">
+                    <LinearLayout android:orientation="horizontal" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text" android:gravity="center" android:id="@id/tab_current_week" android:background="@drawable/shape_button_round" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/text_week" android:layout_weight="1.0" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" android:backgroundTint="@color/CornflowerBlue" />
+                        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text" android:gravity="center" android:id="@id/tab_current_shift" android:background="@drawable/shape_button_round" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/text_shift" android:layout_weight="1.0" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" android:backgroundTint="@color/snackBarTextColor" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_dashboard_weekly_stats" />
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_dashboard_shift" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/bottom_nav_div" />
+    <include android:id="@id/bottom_nav_div" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true" layout="@layout/card_view_bottom_nav" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/pop_up_online_banners" />
+    <RelativeLayout android:id="@id/progressBarFrame" android:background="#802e2f32" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ProgressBar android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:backgroundTint="@color/colorAccent" />
+    </RelativeLayout>
+</RelativeLayout>

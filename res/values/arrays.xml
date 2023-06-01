@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color_list">
+        <item>White</item>
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Yellow</item>
+    </string-array>
+    <string-array name="month_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+    </string-array>
+    <string-array name="sort_order_list">
+        <item>Alphabetical</item>
+        <item>Time</item>
+        <item>Payout</item>
+    </string-array>
+    <string-array name="year_array">
+        <item>2023</item>
+        <item>2022</item>
+        <item>2021</item>
+    </string-array>
+</resources>

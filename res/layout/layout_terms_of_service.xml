@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/White" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="20.0sp" android:textColor="@color/Black" android:gravity="center" android:id="@id/tos_header" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TERMS AND CONDITIONS" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+    <TextView android:textColor="@color/Gray" android:gravity="center" android:id="@id/tos_header_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Please review and agree to the documents below" android:layout_below="@id/tos_header" />
+    <View android:id="@id/div_header" android:background="@color/Gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="10.0dip" android:layout_below="@id/tos_header_desc" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/div_header">
+        <RelativeLayout android:id="@id/tos_link" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/Black" android:id="@id/tos_desc" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Middleton Technologies Services Agreement" />
+            <ImageView android:background="@drawable/ic_arrow_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" android:backgroundTint="@color/Gray" />
+        </RelativeLayout>
+        <View android:background="@color/Gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        <RelativeLayout android:id="@id/privacy_link" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/Black" android:id="@id/privacy_desc" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Middleton Technologies Privacy Policy" />
+            <ImageView android:background="@drawable/ic_arrow_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" android:backgroundTint="@color/Gray" />
+        </RelativeLayout>
+        <View android:background="@color/Gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/button_agree" android:background="@drawable/shape_round" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:layout_alignParentBottom="true" android:backgroundTint="@color/CornflowerBlue">
+        <Button android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/Black" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="YES, I AGREE" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/progressBarFrame" android:background="@color/Gray" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" android:alpha="0.6" android:translationZ="1000.0dip">
+        <ProgressBar android:layout_gravity="center" android:id="@id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:progressBarStyleLarge" />
+    </FrameLayout>
+</RelativeLayout>

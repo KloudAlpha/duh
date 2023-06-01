@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/text" android:gravity="center" android:layout_gravity="center" android:id="@id/currentSubText" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="CHOOSE A PLAN" />
+            <androidx.cardview.widget.CardView android:id="@id/sub_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" app:cardBackgroundColor="@color/container_background" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip" app:contentPadding="5.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textColor="@color/text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="MIDDLETON TECH PROTECTS" android:layout_centerHorizontal="true" />
+                        <TextView android:textSize="11.0sp" android:textColor="@color/Gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Per Month" />
+                    </RelativeLayout>
+                    <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@color/text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="$19.00 /mo" />
+                    <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="2.0dip" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/text" android:gravity="start" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="• Collision Repair Income Protection                         \n• Deactivation Income Protection \n• Hospitalization Income Protection \n• Covers income up to $1900/mo \n• up to 7 days of lost income/payout" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <TextView android:textSize="11.0sp" android:gravity="center" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="Income Protection Plan provided by Kover.ai" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout android:id="@id/progressBarHolder" android:background="#cc2e2f32" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:progressBarStyleLarge" />
+    </FrameLayout>
+</RelativeLayout>

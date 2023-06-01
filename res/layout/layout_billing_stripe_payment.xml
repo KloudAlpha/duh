@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never">
+        <androidx.cardview.widget.CardView android:id="@id/billingDetailsFrame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="3.0dip" app:cardBackgroundColor="@color/container_background" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip" app:contentPadding="3.0dip" app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <RelativeLayout android:id="@id/nameFrame" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/Black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_name" />
+                    <TextView android:textColor="@color/Black" android:gravity="end" android:id="@id/cardHolder" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:id="@id/nameFrameDiv" android:background="@color/DarkGray" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <RelativeLayout android:id="@id/addressFrame" android:padding="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/Black" android:id="@id/addressTV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_address" />
+                    <TextView android:textColor="@color/Black" android:ellipsize="end" android:gravity="end" android:id="@id/address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_marginStart="5.0dip" android:layout_marginEnd="10.0dip" android:layout_toEndOf="@id/addressTV" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:id="@id/addressFrameDiv" android:background="@color/DarkGray" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <RelativeLayout android:id="@id/paymentFrame" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/text" android:id="@id/titlePayment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_payment" android:layout_centerVertical="true" />
+                    <TextView android:textColor="@color/Black" android:gravity="end" android:id="@id/paymentMethod" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_toStartOf="@id/arrow" android:layout_toEndOf="@id/titlePayment" />
+                    <ImageView android:id="@id/arrow" android:background="@drawable/ic_arrow_right" android:layout_width="25.0dip" android:layout_height="25.0dip" android:contentDescription="@string/imageView" android:layout_alignParentEnd="true" android:backgroundTint="@color/DarkGray" />
+                </RelativeLayout>
+                <View android:background="@color/DarkGray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <RelativeLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_subscription" android:layout_centerVertical="true" />
+                    <TextView android:textColor="@color/text" android:gravity="end" android:id="@id/subscriptionType" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:background="@color/DarkGray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <RelativeLayout android:id="@id/promo_code_container" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/text" android:id="@id/title_promo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Add a Promo" />
+                    <EditText android:textColor="@color/text" android:textColorHint="@color/Gray" android:id="@id/promo_code_field" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Promo-Code" android:layout_below="@id/title_promo" android:inputType="text" android:layout_marginEnd="15.0dip" android:layout_toStartOf="@id/button_promo_apply" android:importantForAutofill="no" />
+                    <androidx.cardview.widget.CardView android:id="@id/button_promo_apply" android:layout_width="75.0dip" android:layout_height="50.0dip" android:layout_centerVertical="true" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" app:cardBackgroundColor="@color/background" app:cardCornerRadius="5.0dip" style="@style/ButtonStyle">
+                        <RelativeLayout android:gravity="center" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="APPLY" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+                <View android:background="@color/DarkGray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <TextView android:textColor="@color/text" android:gravity="start" android:layout_gravity="center" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/subWarning" />
+                <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip">
+                    <CheckBox android:id="@id/authPaymentCB" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+                    <TextView android:textColor="@color/text" android:id="@id/auth_warning_link" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/authWarning" android:layout_alignTop="@id/authPaymentCB" android:layout_centerVertical="true" android:layout_marginStart="2.0dip" android:layout_toEndOf="@id/authPaymentCB" />
+                </RelativeLayout>
+                <androidx.cardview.widget.CardView android:id="@id/errorMessageFrame" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="5.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:cardBackgroundColor="@color/Yellow" app:cardCornerRadius="15.0dip" app:contentPadding="5.0dip">
+                    <TextView android:textStyle="bold|italic" android:textColor="@color/Black" android:gravity="center" android:layout_gravity="center" android:id="@id/errorMessageText" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_error_placeholder" />
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView android:id="@id/submitPaymentCardView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="5.0dip" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:cardBackgroundColor="@color/background" app:cardCornerRadius="15.0dip" app:contentPadding="5.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+                    <RelativeLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="18.0sp" android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_submit_payment" />
+                        <TextView android:textSize="18.0sp" android:textStyle="bold|italic" android:textColor="@color/text" android:layout_gravity="end" android:id="@id/totalPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$0.00 USD" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+    <RelativeLayout android:id="@id/progressBarHolder" android:background="@color/amazon_gray" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.7" android:translationZ="999.0dip">
+        <ProgressBar android:id="@id/progress_bar" android:layout_width="100.0dip" android:layout_height="40.0dip" android:indeterminate="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" style="?android:progressBarStyleLarge" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/White" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/label_please_wait" android:layout_below="@id/progress_bar" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,20 @@
+package com.stripe.android;
+
+import cf.InterfaceC1897a;
+import java.util.Calendar;
+import p072df.AbstractC3336l;
+/* compiled from: CustomerSession.kt */
+/* loaded from: classes.dex */
+public final class CustomerSession$Companion$initCustomerSession$timeSupplier$1 extends AbstractC3336l implements InterfaceC1897a<Long> {
+    public static final CustomerSession$Companion$initCustomerSession$timeSupplier$1 INSTANCE = new CustomerSession$Companion$initCustomerSession$timeSupplier$1();
+
+    public CustomerSession$Companion$initCustomerSession$timeSupplier$1() {
+        super(0);
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // cf.InterfaceC1897a
+    public final Long invoke() {
+        return Long.valueOf(Calendar.getInstance().getTimeInMillis());
+    }
+}

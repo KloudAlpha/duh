@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:orientation="vertical" android:id="@id/main" android:background="@drawable/shape_button_round" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="200.0dip" android:animateLayoutChanges="true" android:backgroundTint="@color/container_background" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@drawable/shape_button_round" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginStart="175.0dip" android:layout_marginEnd="175.0dip" android:backgroundTint="@color/dividers" />
+        <TextView android:textColor="@color/text" android:layout_gravity="center" android:id="@id/title_field" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Always On Options" />
+        <TextView android:textColor="@color/Gray" android:gravity="center" android:id="@id/desc_field" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_ad_active_disclaimer" />
+        <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="5.0dip" />
+        <RelativeLayout android:id="@id/auto_decline_alcohol_orders" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/tv_alcohol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_decline_alcohol_orders" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/label_desc_alcohol_orders" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_auto_decline_alcohol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/auto_return_frame" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="25.0dip" android:layout_toStartOf="@id/switch_auto_return">
+                <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_auto_return" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/label_auto_return_desc" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_auto_return" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/auto_decline_hub_orders" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/tv_hub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_decline_hub_orders" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/label_decline_hub_orders_desc" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_auto_decline_hub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/auto_decline_multi_stop_orders" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textColor="@color/text" android:gravity="center" android:id="@id/tv_multi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_multi_stop" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/label_multi_stop_decline_desc" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_auto_decline_multi_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textColor="@color/text" android:id="@id/title_one_click" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/string_one_click" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:maxWidth="275.0dip" android:text="@string/string_one_click_desc" android:layout_marginEnd="5.0dip" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_one_click" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/auto_decline_red_cards" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="25.0dip" android:layout_toStartOf="@id/switch_auto_decline_rc">
+                <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/string_auto_accept_redcard" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/label_decline_red_card_desc" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_auto_decline_rc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView android:textColor="@color/text" android:id="@id/title_decline_shop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/string_auto_accept_shop" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/label_decline_shop_desc" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:theme="@style/SCBSwitch" android:id="@id/switch_decline_shop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <Button android:id="@id/close_button" android:background="@drawable/shape_border_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:text="Close" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip" style="@style/ButtonStyle" />
+    </LinearLayout>
+</ScrollView>

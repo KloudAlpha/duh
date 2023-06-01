@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/main_frame" android:background="@color/container_background" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="5.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/back_frame" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_vertical" android:background="@drawable/ic_baseline_arrow_back_ios_new_24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="@color/text" />
+            <TextView android:layout_gravity="center_vertical" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Back" />
+        </LinearLayout>
+        <View android:background="@color/divider_text_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/main_container" android:background="@color/container_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/auto_accept_container" android:background="#ffedeef1" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="15.0dip" android:layout_toStartOf="@id/switch_auto_decline_orders">
+                        <TextView android:textColor="@color/Black" android:id="@id/autoAcceptTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_auto_decline" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Enable to auto decline orders\n* Orders that DO NOT meet filters will be decline" android:layout_below="@id/autoAcceptTitle" />
+                    </RelativeLayout>
+                    <androidx.appcompat.widget.SwitchCompat android:id="@id/switch_auto_decline_orders" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:background="@color/divider_text_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="General Option Filters" />
+                <RelativeLayout android:id="@id/always_on_frame" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="5.0dip">
+                    <LinearLayout android:orientation="vertical" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/always_on_options_icon">
+                        <TextView android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Always On Options" />
+                        <TextView android:textSize="11.0sp" android:textColor="@color/Gray" android:gravity="start" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_ad_active_disclaimer" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/always_on_options_icon" android:background="@drawable/ic_baseline_settings_24" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" android:backgroundTint="@color/text" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/delay_frame" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/view_delay">
+                        <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_decline_delay" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/text_desc_decline_delay" />
+                    </LinearLayout>
+                    <TextView android:textColor="@color/text" android:id="@id/view_delay" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/decline_override_frame" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/view_decline_override_amount">
+                        <TextView android:textColor="@color/text" android:id="@id/title_decline_override_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Decline override" android:layout_marginEnd="5.0dip" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:id="@id/desc_decline_override_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="DO NOT decline orders that are showing payouts greater than this amount. *This does not apply to stores that are blocked." android:layout_marginEnd="10.0dip" />
+                    </LinearLayout>
+                    <TextView android:textColor="@color/text" android:id="@id/view_decline_override_amount" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.00" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:orientation="vertical" android:background="@drawable/dotted_line" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_margin="5.0dip" android:layerType="software" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Earnings Filters" />
+                <RelativeLayout android:id="@id/min_amount_per_order_frame" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textColor="@color/text" android:id="@id/title_per_order" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/title_min_per_order" android:layout_marginStart="5.0dip" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_decline_min_per_order_desc" android:layout_below="@id/title_per_order" android:layout_marginStart="5.0dip" android:layout_toStartOf="@id/view_min_payout" />
+                    <TextView android:textColor="@color/text" android:gravity="end" android:id="@id/view_min_payout" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placeHolderZero" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/min_amount_per_mile_frame" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textColor="@color/text" android:id="@id/title_per_mile" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/title_min_per_mile" android:layout_marginStart="5.0dip" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:id="@id/title_sub_per_mile" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/desc_min_per_mile" android:layout_below="@id/title_per_mile" android:layout_marginStart="5.0dip" android:layout_toStartOf="@id/view_min_per_mile" />
+                    <TextView android:textColor="@color/text" android:gravity="end" android:id="@id/view_min_per_mile" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placeHolderZero" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:orientation="vertical" android:background="@drawable/dotted_line" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_margin="5.0dip" android:layerType="software" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Distance Filters" />
+                <RelativeLayout android:id="@id/max_distance_frame" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textColor="@color/text" android:id="@id/title_max_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_max_distance" android:layout_marginStart="5.0dip" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/title_sub_max_distance_decline" android:layout_below="@id/title_max_distance" android:layout_marginStart="5.0dip" android:layout_toStartOf="@id/view_max_distance" />
+                    <TextView android:textColor="@color/text" android:id="@id/view_max_distance" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/placeHolderZero" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:orientation="vertical" android:background="@drawable/dotted_line" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_margin="5.0dip" android:layerType="software" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Secondary Filters" />
+                <RelativeLayout android:id="@id/add_on_frame" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="5.0dip">
+                    <LinearLayout android:orientation="vertical" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/add_on_options_icon">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Add-On Options" />
+                        <TextView android:textSize="11.0sp" android:textColor="@color/Gray" android:gravity="start" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Options for when you're already on an order and a new order comes in" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/add_on_options_icon" android:background="@drawable/ic_baseline_settings_24" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" android:backgroundTint="@color/text" />
+                </RelativeLayout>
+                <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" android:layout_marginStart="5.0dip" android:layout_marginEnd="5.0dip" />
+                <RelativeLayout android:id="@id/ad_multi_stop_frame" android:paddingTop="5.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="10.0dip" android:paddingEnd="5.0dip">
+                    <LinearLayout android:orientation="vertical" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/multi_order_options_icon">
+                        <TextView android:textSize="14.0sp" android:textColor="@color/text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Multiple Stop Order Options" />
+                        <TextView android:textSize="11.0sp" android:textColor="@color/Gray" android:gravity="start" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Options for orders that multiple stops" />
+                    </LinearLayout>
+                    <ImageView android:id="@id/multi_order_options_icon" android:background="@drawable/ic_baseline_settings_24" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" android:backgroundTint="@color/text" />
+                </RelativeLayout>
+                <View android:background="@color/divider_text_color" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

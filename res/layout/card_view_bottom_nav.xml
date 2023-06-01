@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/bottom_layout" android:background="@color/container_background" android:paddingTop="5.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center" android:id="@id/menu_history" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/iv0" android:background="@drawable/ic_history_icon" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_centerHorizontal="true" android:contentDescription="@string/imageView" android:backgroundTint="@color/imageView" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_title_history" android:layout_below="@id/iv0" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/menu_settings" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/iv1" android:background="@drawable/ic_filters_icon" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_centerHorizontal="true" android:contentDescription="@string/imageView" android:backgroundTint="@color/imageView" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_title_settings" android:layout_below="@id/iv1" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/btn_launch_camera" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/iv4" android:background="@drawable/ic_photo_camera" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_centerHorizontal="true" android:contentDescription="@string/imageView" android:backgroundTint="@color/imageView" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/label_camera" android:layout_below="@id/iv4" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/menu_extras" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/iv5" android:background="@drawable/ic_baseline_folder_special_24" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_centerHorizontal="true" android:contentDescription="@string/imageView" android:backgroundTint="@color/imageView" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Extras" android:layout_below="@id/iv5" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/btn_launch_doordash" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <ImageView android:id="@id/iv3" android:background="@drawable/ic_open" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_centerHorizontal="true" android:contentDescription="@string/imageView" android:backgroundTint="@color/imageView" />
+        <TextView android:textSize="10.0sp" android:textColor="@color/text" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/menu_title_dash" android:layout_below="@id/iv3" />
+    </RelativeLayout>
+</LinearLayout>

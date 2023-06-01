@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/store_options_frame" android:background="@drawable/shape_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true" android:translationZ="999.0dip" android:backgroundTint="@color/container_background" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <View android:background="@drawable/shape_button_round" android:layout_width="fill_parent" android:layout_height="3.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="2.0dip" android:layout_marginStart="175.0dip" android:layout_marginEnd="175.0dip" android:backgroundTint="@color/dividers" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/store_name_view" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Store Options" />
+        <TextView android:textColor="@color/Gray" android:gravity="center" android:id="@id/address_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="1234 test st, melbourne" />
+        <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="5.0dip" />
+        <RelativeLayout android:id="@id/block_store_frame" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" android:layout_toStartOf="@id/block_store_switch">
+                <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Block Store" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Always auto decline store regardless of filters" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:id="@id/block_store_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" android:layout_toStartOf="@id/block_auto_accept_switch">
+                <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Block Auto Accept" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Do NOT auto accept store regardless of filters" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:id="@id/block_auto_accept_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/block_auto_decline_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" android:layout_toStartOf="@id/do_not_decline_switch">
+                <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Block Auto Decline" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Do NOT auto decline store regardless of filters" />
+            </LinearLayout>
+            <androidx.appcompat.widget.SwitchCompat android:id="@id/do_not_decline_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <View android:background="@color/dividers" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_margin="5.0dip" />
+        <RelativeLayout android:id="@id/delete_store_frame" android:background="@drawable/shape_button_round" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:backgroundTint="@color/background">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toStartOf="@id/delete_icon">
+                <TextView android:textColor="@color/text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete Store" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/Gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="Delete the store from your list" />
+            </LinearLayout>
+            <ImageView android:id="@id/delete_icon" android:background="@drawable/ic_baseline_delete_forever_24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:contentDescription="@string/imageView" android:layout_marginEnd="5.0dip" android:layout_alignParentEnd="true" android:backgroundTint="@color/Red" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

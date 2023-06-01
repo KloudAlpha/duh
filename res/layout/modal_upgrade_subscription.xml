@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main_frame" android:background="@drawable/shape_button_round" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="200.0dip" android:animateLayoutChanges="true" android:backgroundTint="@color/container_background" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text" android:gravity="center" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Get access to auto decline &amp; more!" android:textAllCaps="true" />
+    <TextView android:textColor="@color/text" android:layout_gravity="center" android:id="@id/field" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/text_desc_premium_upgrade" />
+    <LinearLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:background="@drawable/box_check_mark" android:layout_width="30.0dip" android:layout_height="30.0dip" android:contentDescription="@string/imageView" android:backgroundTint="@color/Black" />
+            <TextView android:textColor="@color/text" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stringPremCardGPS" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:background="@drawable/box_check_mark" android:layout_width="30.0dip" android:layout_height="30.0dip" android:contentDescription="@string/imageView" android:backgroundTint="@color/Black" />
+            <TextView android:textColor="@color/text" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stringPremCardAD" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:background="@drawable/box_check_mark" android:layout_width="30.0dip" android:layout_height="30.0dip" android:contentDescription="@string/imageView" android:backgroundTint="@color/Black" />
+            <TextView android:textColor="@color/text" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Auto decline stores" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:background="@drawable/box_check_mark" android:layout_width="30.0dip" android:layout_height="30.0dip" android:contentDescription="@string/imageView" android:backgroundTint="@color/Black" />
+            <TextView android:textColor="@color/text" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stringPremCardData" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:background="@drawable/box_check_mark" android:layout_width="30.0dip" android:layout_height="30.0dip" android:contentDescription="@string/imageView" android:backgroundTint="@color/Black" />
+            <TextView android:textColor="@color/text" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stringPremCardTax" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:background="@drawable/box_check_mark" android:layout_width="30.0dip" android:layout_height="30.0dip" android:contentDescription="@string/imageView" android:backgroundTint="@color/Black" />
+            <TextView android:textColor="@color/text" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stringPremCardAd" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:id="@id/continue_button" android:background="@drawable/shape_border_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="Start Subscription" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" style="@style/ModalButtonStyle" />
+    <Button android:textColor="@color/text" android:id="@id/cancel_button" android:background="@drawable/shape_button_modal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:text="No Thanks" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" style="@style/ModalButtonStyle" />
+</LinearLayout>
